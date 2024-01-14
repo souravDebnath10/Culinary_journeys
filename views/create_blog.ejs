@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+
+<form action="/submit" method="POST">
+    <div class="content">
+        <h1>Write your blog here</h1>
+        <textarea name="title_text" id="title_area" cols="100" rows="3" placeholder="title"></textarea>
+        <textarea name="paragraph_text" id="textArea" cols="100" rows="20" placeholder="main blog"></textarea>
+        <button type="submit" id="saveButton">Save</button>
+    </div>
+</form>
+
+<script src="./script.js"></script>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/jjj.css">
+    <title>your blogs</title>
+</head>
+<body>
+    <% if (locals.items) { %>
+        <ol>
+          <!-- List goes here if current second is even. -->
+          <%for(let i=0;i<items.length;i++){ %>
+            <li>
+              <h1>
+              <a href="#">
+                <%=items[i] %>
+              </a>
+            </h1>
+            </li>
+            <%}%>
+        </ol>
+        <% } else {%>
+          <p>No items to display</p>
+          <% } %>
+
+        <form action="/view" method="post">
+          <div class="content2">
+            <h5>Enter the serial no of the blog to be viewed:</h5>
+            <textarea name="view_text" id="view_area" cols="2" rows="1" ></textarea>
+            <button type="submit" id="viewBtn">view</button>
+        </div>
+        
+        </form>
+        <form action="/delete" method="post">
+          <div class="content3">
+            <h5>Enter the serial no of the blog to be deleted:</h5>
+            <textarea name="delete_text" id="delete_area" cols="2" rows="1" ></textarea>
+            <button type="submit" id="deleteBtn">delete</button>
+        </div>
+        </form>
+
+        
+
+        
+</body>
+</html>

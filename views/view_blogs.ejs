@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    *{
+      background-color: aquamarine;
+    }
+    .titleView{
+      align-items: center;
+      text-align: center;
+    }
+  </style>
+  <title>View Blog</title>
+</head>
+<body>
+    <% if(locals.viewTitle && locals.viewBlog){ %>
+      <h1 class="titleView">
+        <%= viewTitle %>
+      </h1>
+      <h4 class="blogView">
+        <%= viewBlog %>
+      </h4>
+    <%} else {%>
+      <h1>
+        No such blog available
+      </h1>
+    <%}%>
+</body>
+</html>
